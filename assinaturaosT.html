@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+	
+
+	<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3815/3815533.png"/>
+	<img src="https://cdn-icons-png.flaticon.com/512/3815/3815533.png" width="100px"></p>
+		<title>Assinatura Suporte T.I</title>
+	<style>
+		@media only screen and (max-width: 768px) {
+  /* Estilos específicos para dispositivos móveis */
+}
+
+		*{
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+		
+        body {
+			background-image: linear-gradient(rgb(243, 32, 32));
+			display: flex;
+			flex-direction:column;
+			align-items:center;
+			min-height: 150vh;
+			background-color: #404458f6;
+			border-width: 2px;
+			padding: 0;
+			margin: 0;
+			min-height: 100vh;
+			transition: background-color 0.5s ease; /* Adicionado para suavizar a transição de cor de fundo */
+			opacity: 1; /* Adicionado para controlar a opacidade */
+		}
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .close-button:hover {
+            color: #ff0000;
+        }
+        
+		
+		#minhaLista{
+			color: rgb(175, 9, 9);
+			border-width: 2px;
+			border-radius: 5px;
+			border-style: solid;
+			border-color: rgba(248, 236, 236, 0);
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		
+		.hidden {
+			display: none;
+		}
+		
+		.ass1 {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+            width: 100%;
+	        height: 100%;
+			transform: translate(-50%, -50%);
+			z-index: 9999;
+			background-color: rgba(15, 29, 46, 0.87); /* Fundo translúcido */
+			padding: 20px;
+            align-items:center;
+            
+		}
+		
+		main {
+			background-color: rgba(9, 2, 27, 0.541); /* Alterado para ter uma cor de fundo transparente */
+			border-radius: 10px;
+			width: 100%;
+			max-width: 380px;
+			padding: 15px;
+			opacity: 1; /* Adicionado para controlar a opacidade */
+			transition: opacity 0.5s ease; /* Adicionado para suavizar a transição de opacidade */
+		}
+		
+		p {
+			color: #e8e9f1;
+			font-size: 15px;
+			text-align: justify;
+		}
+		
+		.bt {
+			color: #e8e9f1;
+			font-size: 13px;
+			text-align: center;
+		}
+				
+			
+			.ass {
+				background-color: rgb(252, 252, 252);
+				border-width: 3px;
+				border-style:groove;
+				border-color: rgb(250, 10, 10);
+				
+			}
+			label {
+				color: rgb(238, 231, 231);
+				display: block;
+				font-size: 14px;
+				display: inline-block;
+                width: 100px;
+        
+				margin-bottom: 5px;
+				
+				
+				
+				
+				
+
+			}
+			h2{
+				color: white;
+				font-size: 20px ;
+				
+
+
+
+			}
+			h1{
+				color: rgb(238, 226, 226);
+				font-size: 30px ;
+			}
+			input {
+				color: rgb(175, 9, 9);
+				border-width: 2px;
+				border-radius: 5px;
+				border-style: solid;
+				border-color: rgba(248, 236, 236, 0);
+				width: 100%;
+                margin-bottom: 10px;
+				
+			}
+			
+			.glow-on-hover {
+				width: 120px;
+				height: 30px;
+				border: none;
+				outline: none;
+				color: #f3e9e9;
+				background: #f00f0f;
+				cursor: pointer;
+				position: relative;
+				z-index: 0;
+				border-radius: 10px;
+			}
+			
+			.glow-on-hover:before {
+				content: '';
+				background: linear-gradient(45deg, #3c47e6, #1b27cc, #283ea0, #2a4b88, #5772c9, #002bff, #205db8, #2f3f9b, #1a1dd6);
+				position: absolute;
+				top: -2px;
+				left:-2px;
+				background-size: 400%;
+				z-index: -1;
+				filter: blur(5px);
+				width: calc(100% + 4px);
+				height: calc(100% + 4px);
+				animation: glowing 20s linear infinite;
+				opacity: 0;
+				transition: opacity .3s ease-in-out;
+				border-radius: 10px;
+			}
+			
+			.glow-on-hover:active {
+				color: #160303
+			}
+			
+			.glow-on-hover:active:after {
+				background: transparent;
+			}
+			
+			.glow-on-hover:hover:before {
+				opacity: 1;
+			}
+			
+			.glow-on-hover:after {
+				z-index: -1;
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: #da0d0d;
+				left: 0;
+				top: 0;
+				border-radius: 10px;
+			}
+		
+			@keyframes glowing {
+				0% { background-position: 0 0; }
+				50% { background-position: 40%0 0; }
+				100% { background-position: 0 0; }
+			}
+			.inserir{
+				background-color: #002bff;
+			}
+			
+			.loja {
+				margin-top: 50px;
+				width: 300px;
+				height: 100px;
+				display: flex;
+				
+				align-items: flex-start;
+			  }
+			  
+			  .loja .selecao-frase {
+				display: flex;
+				align-items:end;
+			  }
+			  
+			  .loja .selecao-frase label {
+				margin-right: 10px;
+			  }
+			  
+			  
+
+
+			
+			  
+
+	</style>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+
+
+
+<body>
+	<h1>ASSINATURA T.I</h1>
+	
+	<main class="ass1 hidden" id="ass1">
+    <button id="close-button" class="close-button">X<i class="fas fa-times"></i></button>   
+	<input type="file"  id="pdf-file">
+	<div style = "position: relative;">
+		
+		<p class="bt"><canvas id="signature-pad" class="ass" width="330" height="100"></canvas>ASSINATURA
+		<p style="display: flex;">
+		<P class="bt" ><button id="clear-button"class="glow-on-hover" type="button">LIMPAR ASS.</button>
+        <button id="add-signature-button"class="glow-on-hover" type="button">FINALIZAR</button></P>
+		</main>
+		
+
+<main class="loja">
+	<div>
+	<div class="selecao-frase"></div>
+	<label for="selecao-input">Loja:</label>
+<select id="selecao-input" onchange="exibirFraseAdicional()">
+  <option value="" selected >Selecione uma loja</option>
+  <option value="S1">S1</option>
+  <option value="S2">S2</option>
+  <option value="S3">S3</option>
+  <option value="S4">S4</option>
+  <option value="S5">S5</option>
+  <option value="S6">S6</option>
+  <option value="S7">S7</option>
+  <option value="S8">S8</option>
+  <option value="S9">S9</option>
+  <option value="S10">S10</option>
+  <option value="S11">S11</option>
+  <option value="S12">S12</option>
+  <option value="S13">S13</option>
+  <option value="S14">S14</option>
+  <option value="S15">S15</option>
+  <option value="H1">H1</option>
+  <option value="H2">H2</option>
+  <option value="H3">H3</option>
+  <option value="H4">H4</option>
+  <option value="H5">H5</option>
+  <option value="H6">H6</option>
+  <option value="H7">H7</option>
+  <option value="H8">H8</option>
+  <option value="H9">H9</option>
+  <option value="H10">H10</option>
+  <option value="H11">H11</option>
+  <option value="H12">H12</option>
+  <option value="H13">H13</option>
+  <option value="A1">A1</option>
+</select>
+<p></p>
+
+
+		
+			<label for="selecao-input">Documento:</label>
+		     <select id="tipo" >
+			<option value="" selected >Tipo de documento </option>
+			<option value="Orçamento">Orçamento</option>
+			<option value="Chamado">Chamado</option>
+		</select>
+	</main>
+	</div>
+	<p></p>
+
+
+
+
+	
+
+
+		<main>
+            <p id="frase-adicional"></p>
+		
+
+	        <p><label for="name-input">Assinado por: </label>
+			<input type="text" id="name-input"></p>
+			<p><label for="setor-input">Setor: </label>
+			<input type="text" id="setor-input"></p>
+			<p><label for="os-input">Nºdocumento </label>
+			<input type="number" id="os-input"></p>
+			<p><label for="date-input">Data:  </label>
+			<input type="date" id="date-input">
+			 
+			<p><label for="tecnico-input">Tecnico:</label>
+				<input type="text" id="tec-input">
+			</main>
+	   
+			
+			</p>
+		<main>
+		<p class="bt">
+			<button type="button" id="limpar" class="glow-on-hover" onclick="location.reload()">LIMPAR</button>
+			
+			<button id="assinatura-button" class="glow-on-hover">Assinar</button>
+
+			
+		</p>
+	</main>
+			
+		<p></p>
+	</div>
+
+	<canvas id="pdf-canvas"></canvas>
+	
+	<div><img src="https://redespsm.com.br/wp-content/uploads/2016/05/logo-shibata-supermercados.png" width="180px"></div>
+
+	<script>
+		const frases = {
+			S1: 'Loja Shibata Caragua Centro ',
+			S2: 'Loja Shibata Jacareí I',
+			S3: 'Loja Shibata Jacareí II ',
+			S4: 'Loja Shibata Taubaté Povo ',
+			S5: 'Loja Shibata Biritiba ',
+			S6: 'Loja  Shibata Empório',
+			S7: 'Loja  Shibata Jacareí III',
+			S8: 'Loja  Empório Kimoto ',
+			S9: 'Loja  Cesar de Souza',
+			S10: 'Loja  São Sebastião',
+			S11: 'Loja Shibata Jacareí 4 ',
+			S12: 'Loja Shibata Suzano',
+			S13: ' Loja Shibata Jacareí São João',
+			S14: 'Loja Shibata Poá',
+			S15: 'Loja Shibata Taubaté Bonfim',
+			H1: 'Loja Shibata Itaqua',
+			H2: ' Loja Shibata Mogi Vila Industrial ',
+			H3: 'Loja Shibata Taubaté III ',
+			H4: 'Loja Shibata Caçapava ',
+			H5: 'Loja Shibata Ferraz de Vasconcelos',
+			H6: 'Loja Shibata Aparecida ',
+			H7: 'Loja Shibata Shopping Pátio Pinda',
+			H8: 'Loja Shibata Shopping Oriente',
+			H9: 'Loja Shibata Jacareí Centro',
+			H10: 'Loja Shibata São Miguel ',
+			H11: ' Loja Shibata Pinda Centro',
+			H12: ' Loja Shibata SJC Santana',
+			H13: 'Loja Ubatuba',
+			A1: 'Loja Caragua Centro',
+
+
+		
+		  };
+		  
+		  function exibirFraseAdicional() {
+			const selectElement = document.getElementById('selecao-input');
+			const fraseAdicionalElement = document.getElementById('frase-adicional');
+			const selectedOption = selectElement.value;
+			
+			fraseAdicionalElement.textContent = frases[selectedOption] || '';
+		  }
+		  
+	const ass1Element = document.getElementById('ass1');
+ass1Element.classList.add('hidden');
+const pdfFileInput = document.getElementById('pdf-file');
+const signaturePad = new SignaturePad(document.getElementById('signature-pad'));
+
+document.getElementById('clear-button').addEventListener('click', function() {
+  signaturePad.clear();
+});
+
+document.getElementById('close-button').addEventListener('click', function() {
+  ass1Element.classList.add('hidden');
+});
+
+// Dentro do evento click do botão "Assinar"
+document.getElementById('assinatura-button').addEventListener('click', function() {
+  // Exibir o elemento de assinatura
+  ass1Element.classList.remove('hidden');
+  // Adicionar classe ao body para tornar a página transparente
+  document.body.classList.add('modal-open');
+});
+const currentHour = new Date().getHours();
+let greeting;
+
+if (currentHour >= 5 && currentHour < 12) {
+  greeting = 'Bom dia';
+} else if (currentHour >= 12 && currentHour < 18) {
+  greeting = 'Boa tarde';
+} else {
+  greeting = 'Boa noite';
+}
+
+document.getElementById('add-signature-button').addEventListener('click', function() {
+  document.body.classList.remove('modal-open');
+  const pdfFile = pdfFileInput.files[0];
+  const reader = new FileReader();
+  reader.onload = function() {
+    const pdfData = new Uint8Array(reader.result);
+    const signatureImage = signaturePad.toDataURL();
+    pdfjsLib.getDocument({ data: pdfData }).promise.then(function(pdfDoc) {
+      const pageNumber = 1;
+      pdfDoc.getPage(pageNumber).then(function(page) {
+        const viewport = page.getViewport({ scale: 1 });
+        const canvas = document.getElementById('pdf-canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        page.render({
+          canvasContext: context,
+          viewport: viewport
+        }).promise.then(function() {
+          const signatureCanvas = document.createElement('canvas');
+          signatureCanvas.width = canvas.width;
+          signatureCanvas.height = canvas.height;
+          const signatureContext = signatureCanvas.getContext('2d');
+          const signatureImageObj = new Image();
+          signatureImageObj.src = signatureImage;
+          signatureImageObj.onload = function() {
+            const signatureX = canvas.width - signatureImageObj.width;
+            const signatureY = canvas.height - signatureImageObj.height;
+            signatureContext.drawImage(signatureImageObj, signatureX, signatureY);
+            context.drawImage(signatureCanvas, -1, -150);
+            context.font = "10px Poppins";
+            context.fillText('________________________________________ ', 260, canvas.height - 150);
+            context.font = "bold 10px Poppins";
+            context.fillText('Assinado por:', 270, canvas.height - 130);
+            context.font = "10px Poppins";
+            context.fillText(document.getElementById('name-input').value.toUpperCase(), 350, canvas.height - 130);
+
+            context.font = "bold 10px Poppins";
+            context.fillText('Setor:', 310, canvas.height - 110);
+            context.font = "10px Poppins";
+            context.fillText(document.getElementById('setor-input').value.toUpperCase(), 350, canvas.height - 110);
+
+            context.font = "bold 10px Poppins";
+			context.fillText(document.getElementById('tipo').value + ":" , 287, canvas.height - 90);
+			context.font = "10px Poppins";
+			context.fillText(document.getElementById('os-input').value, 350, canvas.height - 90);
+
+			context.font = "bold 10px Poppins";
+			context.fillText('Data:', 313, canvas.height - 70);
+			context.font = "10px Poppins";
+			context.fillText(document.getElementById('date-input').value, 350, canvas.height - 70);
+
+			context.font = "bold 10px Poppins";
+			context.fillText('Técnico:', 10, canvas.height - 10);
+			context.font = "10px Poppins";
+			context.fillText(document.getElementById('tec-input').value.toUpperCase(), 55, canvas.height - 10);
+
+			const pdfDataUri = canvas.toDataURL();
+			const downloadLink = document.createElement('a');
+								downloadLink.href = pdfDataUri;
+								downloadLink.download = "Orcamento: " + document.getElementById('os-input').value;
+								downloadLink.click();
+			const imageBase64 = canvas.toDataURL();
+
+			const phoneNumber = "5512991627902"; // Número de telefone do destinatário
+			const message = `${greeting}, segue o ` + document.getElementById('tipo').value + ` N° ` + document.getElementById('os-input').value + ", assinado pela loja " + document.getElementById('selecao-input').value ;
+
+
+            const apiEndpoint = "https://api.whatsapp.com/send";
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `${apiEndpoint}?phone=${phoneNumber}&text=${encodedMessage}`;
+
+            window.open(whatsappUrl, "_blank");
+            
+            ass1Element.classList.add('hidden');
+          };
+        });
+      });
+    });
+  };
+  reader.readAsArrayBuffer(pdfFile);
+});
+
+signaturePad.clear();
+
+
+	</script>
+	
+</body>
+</html>
